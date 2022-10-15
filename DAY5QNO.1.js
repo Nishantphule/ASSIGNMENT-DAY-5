@@ -6,27 +6,33 @@
 // ANONYMOUS FUNCTION-
 // CODE-
 
-let getodd = function (arr)
-{let odd =[]
-    for(let i in arr)
-  if (arr[i] % 2 !== 0)
-        {odd.push(arr[i]);}
-    return odd}
-    console.log(getodd([2, 4, 9, 7, 17, 26]))
+let getodd = function (arr) {
+  let odd = []
+  for (let i in arr)
+    if (arr[i] % 2 !== 0) { 
+      odd.push(arr[i]); 
+    }
+  return odd
+}
+console.log(getodd([2, 4, 9, 7, 17, 26]))
 
 // OUTPUT-
 [9, 7, 17]
 
 
-// IEFE-
-// CODE-
-(function (arr) {let odd = [];
-     for(let i in arr)
-      {if (arr[i] % 2 !== 0)
-          {odd.push(arr[i]);}}
-         
-          console.log(odd);})
-          ([2, 4, 9, 7, 17, 26])
+  // IEFE-
+  // CODE-
+  (function (arr) {
+    let odd = [];
+    for (let i in arr) {
+      if (arr[i] % 2 !== 0) { 
+        odd.push(arr[i]); 
+      }
+    }
+
+    console.log(odd);
+  })
+  ([2, 4, 9, 7, 17, 26])
 
 // OUTPUT-
 // (3) [9, 7, 17]
@@ -37,10 +43,10 @@ let getodd = function (arr)
 
 // ANONYMOUS FUNCTION-
 // CODE-
-let gettitleCase = function (str)
-{str = str.split(' ');
-for (var i = 0; i < str.length; i++) {
-    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+let gettitleCase = function (str) {
+  str = str.split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
   }
   return str.join(' ');
 }
@@ -53,13 +59,13 @@ console.log(gettitleCase("welcome to guvi"));
 // IEFE-
 // CODE-
 function titleCase(str) {
-    str = str.split(' ');
-    for (var i = 0; i < str.length; i++) {
-      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-    }
-    return str.join(' ');
+  str = str.split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
   }
-  console.log(titleCase("welcome to guvi"));
+  return str.join(' ');
+}
+console.log(titleCase("welcome to guvi"));
 
 // OUTPUT-
 // Welcome To Guvi
@@ -70,14 +76,14 @@ function titleCase(str) {
 
 // ANONYMOUS-
 // CODE-
-let getsum = function (arr){
-let sum = 0
-    for (var i = 0; i < arr.length; i++) {
-     sum+=arr[i]
-    }
-    return sum;
+let getsum = function (arr) {
+  let sum = 0
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i]
   }
-  console.log(getsum([2,4,5,6,8,10]));
+  return sum;
+}
+console.log(getsum([2, 4, 5, 6, 8, 10]));
 
 // OUTPUT-
 // 35
@@ -86,13 +92,13 @@ let sum = 0
 // IEFE-
 // CODE-
 function getsum(arr) {
-    let sum = 0
-    for (var i = 0; i < arr.length; i++) {
-     sum+=arr[i]
-    }
-    return sum;
+  let sum = 0
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i]
   }
-  console.log(getsum([2,4,5,6,8,10]));
+  return sum;
+}
+console.log(getsum([2, 4, 5, 6, 8, 10]));
 
 // OUTPUT-
 // 35
@@ -103,18 +109,21 @@ function getsum(arr) {
 
 // ANONYMOUS-
 // CODE-
-let getPrime = function (arr){
-    let prime = []
-    for (var i = 0; i<arr.length; i++){
+let getPrime = function (arr) {
+  let prime = []
+  for (var i = 0; i < arr.length; i++) {
     var count = 0
-    for(var j=1;j<=arr[i];j++){
-     if(arr[i]%j===0)
-    count++;}
-    if(count===2){
-    prime.push(arr[i])}}
-    return prime;
+    for (var j = 1; j <= arr[i]; j++) {
+      if (arr[i] % j === 0)
+        count++;
+    }
+    if (count === 2) {
+      prime.push(arr[i])
+    }
   }
-  console.log(getPrime([2,4,5,6,8,10,13,14,17,22,23]));
+  return prime;
+}
+console.log(getPrime([2, 4, 5, 6, 8, 10, 13, 14, 17, 22, 23]));
 
 // OUTPUT-
 // (5) [2, 5, 13, 17, 23]
@@ -123,17 +132,20 @@ let getPrime = function (arr){
 // IEFE-
 // CODE-
 function getPrime(arr) {
-    let prime = []
-    for (var i = 0; i<arr.length; i++){
+  let prime = []
+  for (var i = 0; i < arr.length; i++) {
     var count = 0
-    for(var j=1;j<=arr[i];j++){
-     if(arr[i]%j===0)
-    count++;}
-    if(count===2){
-    prime.push(arr[i])}}
-    return prime;
+    for (var j = 1; j <= arr[i]; j++) {
+      if (arr[i] % j === 0)
+        count++;
+    }
+    if (count === 2) {
+      prime.push(arr[i])
+    }
   }
-  console.log(getPrime([2,4,5,6,8,10,13,14,17,22,23]));
+  return prime;
+}
+console.log(getPrime([2, 4, 5, 6, 8, 10, 13, 14, 17, 22, 23]));
 
 // OUTPUT-
 // (5) [2, 5, 13, 17, 23]
@@ -144,16 +156,18 @@ function getPrime(arr) {
 
 // ANONYMOUS-
 // CODE-
-let getpalindromes = function (arr){
+let getpalindromes = function (arr) {
   let num = arr.join().split(",")
   let palindromes = []
-  for (var i = 0; i<num.length; i++){
-  let p = num[i].split("").reverse().join("")
-  if(p===num[i]){
-  palindromes.push(arr[i])}}
-  return palindromes;
+  for (var i = 0; i < num.length; i++) {
+    let p = num[i].split("").reverse().join("")
+    if (p === num[i]) {
+      palindromes.push(arr[i])
+    }
   }
-console.log(getpalindromes([121,343,556,678,999,828,543]));
+  return palindromes;
+}
+console.log(getpalindromes([121, 343, 556, 678, 999, 828, 543]));
 
 // OUTPUT-
 // (4) [121, 343, 999, 828]
@@ -162,15 +176,17 @@ console.log(getpalindromes([121,343,556,678,999,828,543]));
 // IEFE-
 // CODE-
 function getpalindromes(arr) {
-    let num = arr.join().split(",")
-    let palindromes = []
-    for (var i = 0; i<num.length; i++){
+  let num = arr.join().split(",")
+  let palindromes = []
+  for (var i = 0; i < num.length; i++) {
     let p = num[i].split("").reverse().join("")
-    if(p===num[i]){
-    palindromes.push(arr[i])}}
-    return palindromes;
+    if (p === num[i]) {
+      palindromes.push(arr[i])
+    }
   }
-  console.log(getpalindromes([121,343,556,678,999,828,543]));
+  return palindromes;
+}
+console.log(getpalindromes([121, 343, 556, 678, 999, 828, 543]));
 
 // OUTPUT-
 // (4) [121, 343, 999, 828]
@@ -181,18 +197,18 @@ function getpalindromes(arr) {
 
 // ANONYMOUS-
 // CODE-
-let getmedian = function (arr1,arr2){
-  let arr = [...arr1,...arr2].sort()
+let getmedian = function (arr1, arr2) {
+  let arr = [...arr1, ...arr2].sort()
   // as we have same size array. we will divide the length by 2 ,to get the median elements
   // arr.length/2 will be the nth index median and n-1
-  let n = arr.length/2
+  let n = arr.length / 2
   var m1 = n
-  var m2 = n-1
+  var m2 = n - 1
   // to get median add both index and divide by 2
-  var median = arr[m1]+arr[m2]/2
+  var median = arr[m1] + arr[m2] / 2
   return median;
 }
-console.log(getmedian([2,3,4],[6,7,9]));
+console.log(getmedian([2, 3, 4], [6, 7, 9]));
 
 // OUTPUT-
 // 8
@@ -200,18 +216,18 @@ console.log(getmedian([2,3,4],[6,7,9]));
 
 // IEFE-
 // CODE-
-function getmedian(arr1,arr2) {
-    let arr = [...arr1,...arr2].sort()
-    // as we have same size array. we will divide the length by 2 ,to get the median elements
-    // arr.length/2 will be the nth index median and n-1
-    let n = arr.length/2
-    var m1 = n
-    var m2 = n-1
-    // to get median add both index and divide by 2
-    var median = arr[m1]+arr[m2]/2
-    return median;
-  }
-  console.log(getmedian([2,3,4],[6,7,9]));
+function getmedian(arr1, arr2) {
+  let arr = [...arr1, ...arr2].sort()
+  // as we have same size array. we will divide the length by 2 ,to get the median elements
+  // arr.length/2 will be the nth index median and n-1
+  let n = arr.length / 2
+  var m1 = n
+  var m2 = n - 1
+  // to get median add both index and divide by 2
+  var median = arr[m1] + arr[m2] / 2
+  return median;
+}
+console.log(getmedian([2, 3, 4], [6, 7, 9]));
 
 // OUTPUT-
 // 8
@@ -222,11 +238,13 @@ function getmedian(arr1,arr2) {
 
 // ANONYMOUS-
 // CODE-
-let removeDuplicates = function (arr){
+let removeDuplicates = function (arr) {
   let Array = []
-  for(let i = 0;i<arr.length;i++){
-  if(arr[i]!==arr[i-1]){
-  Array.push(arr[i])}}
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[i - 1]) {
+      Array.push(arr[i])
+    }
+  }
   return Array;
 }
 console.log(removeDuplicates([1, 2, 2, 3, 3, 4, 4, 4, 5, 5]));
@@ -238,13 +256,15 @@ console.log(removeDuplicates([1, 2, 2, 3, 3, 4, 4, 4, 5, 5]));
 // IEFE-
 // CODE-
 function removeDuplicates(arr) {
-    let Array = []
-    for(let i = 0;i<arr.length;i++){
-    if(arr[i]!==arr[i-1]){
-    Array.push(arr[i])}}
-    return Array;
+  let Array = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[i - 1]) {
+      Array.push(arr[i])
+    }
   }
-  console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 4, 5, 5]));
+  return Array;
+}
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 4, 5, 5]));
 
 // OUTPUT-
 // (5) [1, 2, 3, 4, 5]
@@ -255,14 +275,14 @@ function removeDuplicates(arr) {
 
 // ANONYMOUS-
 // CODE-
-let Rotate = function (arr,k){
+let Rotate = function (arr, k) {
   let n = arr.length
-  let arr1 = arr.slice(n-k)
-  let arr2 = arr.slice(0,n-k)
-  var Array = [...arr1,...arr2]
+  let arr1 = arr.slice(n - k)
+  let arr2 = arr.slice(0, n - k)
+  var Array = [...arr1, ...arr2]
   return Array
 }
-console.log(Rotate([1, 2, 3, 4, 5],3));
+console.log(Rotate([1, 2, 3, 4, 5], 3));
 
 // OUTPUT-
 // (5) [3, 4, 5, 1, 2]
@@ -270,14 +290,14 @@ console.log(Rotate([1, 2, 3, 4, 5],3));
 
 // IEFE-
 // CODE-
-function Rotate(arr,k) {
-    let n = arr.length
-    let arr1 = arr.slice(n-k)
-    let arr2 = arr.slice(0,n-k)
-    var Array = [...arr1,...arr2]
-    return Array
-  }
-  console.log(Rotate([1, 2, 3, 4, 5],3));
+function Rotate(arr, k) {
+  let n = arr.length
+  let arr1 = arr.slice(n - k)
+  let arr2 = arr.slice(0, n - k)
+  var Array = [...arr1, ...arr2]
+  return Array
+}
+console.log(Rotate([1, 2, 3, 4, 5], 3));
 
 // OUTPUT-
 // (5) [3, 4, 5, 1, 2]
