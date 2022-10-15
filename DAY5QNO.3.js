@@ -6,9 +6,10 @@
 // CODE-
 let getodd = (arr) => {
   let odd = []
-  for (let i in arr)
+  for (let i in arr) {
     if (arr[i] % 2 !== 0)
       odd.push(arr[i]);
+  }
   return odd;
 }
 console.log(getodd([2, 4, 9, 7, 17, 26]))
